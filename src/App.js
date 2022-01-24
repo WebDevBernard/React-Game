@@ -11,17 +11,26 @@ const cardImages = [
 
 function App() {
   const [cards, setCards] = useState([]);
+  const [turns, setTurns] = useState([]);
+
   // randomizes cards
   const shuffleCards = () => {
     // duplicates each card
     const shuffledCards = [...cardImages, ...cardImages]
+      // this randomizes the order of the cards
       .sort(() => Math.random() - 0.5)
+      // returns the new array of the sorted array
       .map((card) => ({ ...card, id: Math.random() }));
+
+    setCards(shuffledCards);
   };
+
+  console.log(cards, turns);
+
   return (
     <div className="App">
       <h1>Magic Match</h1>
-      <button>New Game</button>
+      <button onClick={shuffleCards}>New Game</button>
     </div>
   );
 }
