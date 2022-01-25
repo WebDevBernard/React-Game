@@ -11,7 +11,7 @@ const cardImages = [
     matched: false,
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/3/39/007Squirtle.png",
+    src: "https://archives.bulbagarden.net/media/upload/thumb/3/39/007Squirtle.png/600px-007Squirtle.png",
     matched: false,
   },
   {
