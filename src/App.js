@@ -5,34 +5,42 @@ const cardImages = [
   {
     src: "https://archives.bulbagarden.net/media/upload/thumb/7/73/002Ivysaur.png/600px-002Ivysaur.png",
     matched: false,
+    name: "Ivysaur"
   },
   {
     src: "https://archives.bulbagarden.net/media/upload/thumb/7/7e/006Charizard.png/600px-006Charizard.png",
     matched: false,
+    name: "Charizard"
   },
   {
     src: "https://archives.bulbagarden.net/media/upload/thumb/3/39/007Squirtle.png/600px-007Squirtle.png",
     matched: false,
+    name: "Squirtle"
   },
   {
     src: "https://archives.bulbagarden.net/media/upload/thumb/e/e2/133Eevee.png/600px-133Eevee.png",
     matched: false,
+    name: "Eevee"
   },
   {
     src: "https://archives.bulbagarden.net/media/upload/thumb/3/3e/096Drowzee.png/600px-096Drowzee.png",
     matched: false,
+    name: "Drowzee"
   },
   {
     src: "https://archives.bulbagarden.net/media/upload/thumb/6/60/037Vulpix.png/600px-037Vulpix.png",
     matched: false,
+    name: "Vulpix"
   },
   {
     src: "https://archives.bulbagarden.net/media/upload/thumb/0/0d/025Pikachu.png/600px-025Pikachu.png",
     matched: false,
+    name: "Pikachu"
   },
   {
     src: "https://archives.bulbagarden.net/media/upload/thumb/7/7f/209Snubbull.png/600px-209Snubbull.png",
     matched: false,
+    name: "Snubbull"
   },
 ];
 
