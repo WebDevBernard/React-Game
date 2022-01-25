@@ -23,7 +23,7 @@ const cardImages = [
     matched: false,
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/8/8b/080Slowbro-Galar.png/600px-080Slowbro-Galar.png",
+    src: "https://archives.bulbagarden.net/media/upload/thumb/6/60/037Vulpix.png/600px-037Vulpix.png",
     matched: false,
   },
   {
