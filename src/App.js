@@ -19,7 +19,7 @@ const cardImages = [
     matched: false,
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/7/7d/083Farfetch%27d-Galar.png",
+    src: "https://archives.bulbagarden.net/media/upload/thumb/3/3e/096Drowzee.png/600px-096Drowzee.png",
     matched: false,
   },
   {
