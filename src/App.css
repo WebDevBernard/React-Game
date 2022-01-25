@@ -2,6 +2,16 @@
   max-width: 860px;
   margin: 40px auto;
 }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu button {
+  margin-right: 16px;
+}
 button {
   background: none;
   border: 2px solid #fff;

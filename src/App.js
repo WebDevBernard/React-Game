@@ -77,7 +77,9 @@ function App() {
   return (
     <div className="App">
       <h1>Magic Match</h1>
-      <button onClick={shuffleCards}>New Game</button>
+      <div className="menu">
+        <button onClick={shuffleCards}>New Game</button> <p>Turns: {turns}</p>
+      </div>
       <div className="card-grid">
         {cards.map((card) => (
           <SingleCard
@@ -85,11 +87,11 @@ function App() {
             card={card}
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
+            matched={card.matched}
             disabled={disabled}
           />
         ))}
       </div>
-      <p>Turns: {turns}</p>
     </div>
   );
 }
