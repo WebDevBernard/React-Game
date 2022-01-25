@@ -2,12 +2,38 @@ import "./App.css";
 import SingleCard from "./components/SingleCard";
 import { useState, useEffect } from "react";
 const cardImages = [
-  { src: "/img/helmet-1.png", matched: false },
-  { src: "/img/potion-1.png", matched: false },
-  { src: "/img/ring-1.png", matched: false },
-  { src: "/img/scroll-1.png", matched: false },
-  { src: "/img/shield-1.png", matched: false },
-  { src: "/img/sword-1.png", matched: false },
+  {
+    src: "https://archives.bulbagarden.net/media/upload/thumb/7/73/002Ivysaur.png/600px-002Ivysaur.png",
+    matched: false,
+  },
+  {
+    src: "https://archives.bulbagarden.net/media/upload/thumb/7/7e/006Charizard.png/600px-006Charizard.png",
+    matched: false,
+  },
+  {
+    src: "https://archives.bulbagarden.net/media/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png",
+    matched: false,
+  },
+  {
+    src: "https://archives.bulbagarden.net/media/upload/thumb/e/e2/133Eevee.png/600px-133Eevee.png",
+    matched: false,
+  },
+  {
+    src: "https://archives.bulbagarden.net/media/upload/7/7d/083Farfetch%27d-Galar.png",
+    matched: false,
+  },
+  {
+    src: "https://archives.bulbagarden.net/media/upload/thumb/8/8b/080Slowbro-Galar.png/600px-080Slowbro-Galar.png",
+    matched: false,
+  },
+  {
+    src: "https://archives.bulbagarden.net/media/upload/thumb/0/0d/025Pikachu.png/600px-025Pikachu.png",
+    matched: false,
+  },
+  {
+    src: "https://archives.bulbagarden.net/media/upload/thumb/7/7f/209Snubbull.png/600px-209Snubbull.png",
+    matched: false,
+  },
 ];
 
 function App() {
@@ -16,6 +42,7 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  const [victory, setVictory] = useState(false);
 
   // randomizes cards
   const shuffleCards = () => {
@@ -76,10 +103,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Magic Match</h1>
       <div className="menu">
-        <button onClick={shuffleCards}>New Game</button> <p>Turns: {turns}</p>
+        <button onClick={shuffleCards}>New Game</button>
+        <span className="menu">
+          Turns Taken:
+          <p> {turns}</p>
+        </span>
       </div>
+      <p>Flip the Pokeball to find a matching Pokemon</p>
       <div className="card-grid">
         {cards.map((card) => (
           <SingleCard
@@ -91,6 +122,23 @@ function App() {
             disabled={disabled}
           />
         ))}
+      </div>
+      <div className="footer">
+        <br />
+        <div>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.flaticon.com/free-icons/pokemon"
+            title="pokemon icons"
+          >
+            Pokemon icons created by Darius Dan - Flaticon
+          </a>
+          <a target="_blank" rel="noreferrer" href="https://bulbagarden.net/">
+            All other images and background from bulbagarden.net
+          </a>
+        </div>
+        <br />
       </div>
     </div>
   );

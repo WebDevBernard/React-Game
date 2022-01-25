@@ -3,11 +3,16 @@
 }
 
 .card img {
-  width: 100%;
+  width: 85%;
   display: block;
-  border: 2px solid #fff;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
   border-radius: 6px;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .card .front {
@@ -21,23 +26,8 @@
   transition-delay: 0.2s;
 }
 
-.matched .front {
-  animation: dance 1s linear infinite 500ms;
-}
-@keyframes dance {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-  25% {
-    transform: rotate(-1deg);
-  }
-  75% {
-    transform: rotate(1deg);
-  }
-}
-
 .card .back {
+  opacity: 0.8;
   transition: all ease-in 0.2s;
   transition-delay: 0.2s;
 }
