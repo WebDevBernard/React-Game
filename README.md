@@ -1,12 +1,12 @@
 ## Preview
 
-!["React-Game"]()
+!["React-Game"](https://github.com/WebDevBernard/React-Game/blob/main/img/MagicMatch.png?raw=true)
 
 ## About
 
-- A memory matching card game best played while sitting on the toilet
+- A memory matching card game
 - Tutorial by [Net Ninja Memory Game](https://www.youtube.com/watch?v=ZCKohZwGZMw&list=PL4cUxeGkcC9iQ7g2eoNXHCJBBBz40S_Lm&index=1)
-- [Live Demo]()
+- [Live Demo](https://react-game-ashen.vercel.app/)
 
 ## Installation
 
