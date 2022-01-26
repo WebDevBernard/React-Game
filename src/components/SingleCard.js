@@ -15,6 +15,7 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
           src="/img/pokeball.png"
           alt="card back"
           onClick={handleClick}
+          onDoubleClick={handleClick}
         />
       </div>
     </div>
