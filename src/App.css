@@ -8,6 +8,10 @@ body {
   background-size: cover;
 }
 .App {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
   width: 35rem;
   margin: 0 auto;
 }
