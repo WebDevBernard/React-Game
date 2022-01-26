@@ -134,7 +134,7 @@ function App() {
           <p> {turns}</p>
         </span>
       </div>
-      {victory && <p className="score">You found 'em all!</p>}
+      {victory && <p className="score">Congratulations! You Win!</p>}
       {!victory && <p>Flip the Pokeball to find a matching Pokemon</p>}
       <div className="card-grid">
         {cards.map((card) => (
