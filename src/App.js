@@ -102,7 +102,7 @@ function App() {
     }
     if (choiceOne && choiceTwo) {
       setDisabled(true);
-      if (choiceOne.src === choiceTwo.src) {
+      if (choiceOne.src === choiceTwo.src && choiceOne.id !== choiceTwo.id) {
         setCards((prevCards) => {
           return prevCards.map((card) => {
             if (card.src === choiceOne.src) {
