@@ -7,6 +7,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+a {
+  text-decoration: none;
+}
 .App {
   position: absolute;
   top: 5%;
@@ -14,6 +17,26 @@ body {
   right: 0;
   width: 35rem;
   margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #4c241d;
+  color: #4c241d;
+  background-color: transparent;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #4c241d;
+}
+
+.btn img {
+  margin-right: 16px;
+  height: 24px;
 }
 
 .menu {
@@ -66,6 +89,9 @@ button:hover {
 }
 
 .footer a {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
   font-size: 12px;
   text-decoration: none;
   color: black;

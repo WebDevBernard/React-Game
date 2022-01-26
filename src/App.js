@@ -170,8 +170,19 @@ function App() {
             Pokemon icons created by Roundicons Freebies - Flaticon
           </a>
         </div>
-        <br />
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/WebDevBernard/React-Game"
+          title="Github"
+        >
+          <button className="btn">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+            Tutorial Available on Github
+          </button>
+        </a>
       </div>
+      <br />
     </div>
   );
 }
