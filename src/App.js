@@ -1,46 +1,46 @@
 import "./App.css";
 import SingleCard from "./components/SingleCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 const cardImages = [
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/7/73/002Ivysaur.png/600px-002Ivysaur.png",
+    src: "/img/bullbasaur.png",
     matched: false,
-    name: "Ivysaur"
+    name: "Bulbasaur",
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/7/7e/006Charizard.png/600px-006Charizard.png",
+    src: "/img/eevee.png",
     matched: false,
-    name: "Charizard"
+    name: "Eevee",
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/3/39/007Squirtle.png/600px-007Squirtle.png",
+    src: "/img/mankey.png",
     matched: false,
-    name: "Squirtle"
+    name: "Mankey",
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/e/e2/133Eevee.png/600px-133Eevee.png",
+    src: "/img/psyduck.png",
     matched: false,
-    name: "Eevee"
+    name: "Psyduck",
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/3/3e/096Drowzee.png/600px-096Drowzee.png",
+    src: "/img/zubat.png",
     matched: false,
-    name: "Drowzee"
+    name: "Zubat",
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/6/60/037Vulpix.png/600px-037Vulpix.png",
+    src: "/img/rattata.png",
     matched: false,
-    name: "Vulpix"
+    name: "Rattata",
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/0/0d/025Pikachu.png/600px-025Pikachu.png",
+    src: "/img/pidgey.png",
     matched: false,
-    name: "Pikachu"
+    name: "Pidgey",
   },
   {
-    src: "https://archives.bulbagarden.net/media/upload/thumb/7/7f/209Snubbull.png/600px-209Snubbull.png",
+    src: "/img/caterpie.png",
     matched: false,
-    name: "Snubbull"
+    name: "Caterpie",
   },
 ];
 
@@ -61,6 +61,7 @@ function App() {
       // returns the new array of the sorted array
       .map((card) => ({ ...card, id: Math.random() }));
 
+    setVictory(false);
     setChoiceOne(null);
     setChoiceTwo(null);
     setCards(shuffledCards);
@@ -81,9 +82,24 @@ function App() {
     setTurns((prevTurns) => prevTurns + 1);
     setDisabled(false);
   };
+
+  // finds when all cards match
+  const findVictory = useCallback(() => {
+    let counter = 0;
+    for (let i = 0; i < cards.length; i++) {
+      if (cards[i].matched) {
+        counter += 1;
+      }
+    }
+    return counter;
+  }, [cards]);
+
   // compare 2 selected cards
 
   useEffect(() => {
+    if (findVictory() === cards.length) {
+      setVictory(true);
+    }
     if (choiceOne && choiceTwo) {
       setDisabled(true);
       if (choiceOne.src === choiceTwo.src) {
@@ -101,7 +117,7 @@ function App() {
         setTimeout(() => resetTurn(), 1000);
       }
     }
-  }, [choiceOne, choiceTwo]);
+  }, [choiceOne, choiceTwo, cards.length, findVictory]);
 
   // starts game automatically
 
@@ -113,12 +129,13 @@ function App() {
     <div className="App">
       <div className="menu">
         <button onClick={shuffleCards}>New Game</button>
-        <span className="menu">
+        <span className="score">
           Turns Taken:
           <p> {turns}</p>
         </span>
       </div>
-      <p>Flip the Pokeball to find a matching Pokemon</p>
+      {victory && <p className="score">You found 'em all!</p>}
+      {!victory && <p>Flip the Pokeball to find a matching Pokemon</p>}
       <div className="card-grid">
         {cards.map((card) => (
           <SingleCard
@@ -126,7 +143,6 @@ function App() {
             card={card}
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
-            matched={card.matched}
             disabled={disabled}
           />
         ))}
@@ -134,6 +150,9 @@ function App() {
       <div className="footer">
         <br />
         <div>
+          <a target="_blank" rel="noreferrer" href="https://bulbagarden.net/">
+            Background Image from bulbagarden.net
+          </a>
           <a
             target="_blank"
             rel="noreferrer"
@@ -142,8 +161,13 @@ function App() {
           >
             Pokemon icons created by Darius Dan - Flaticon
           </a>
-          <a target="_blank" rel="noreferrer" href="https://bulbagarden.net/">
-            All other images and background from bulbagarden.net
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.flaticon.com/free-icons/pokemon"
+            title="pokemon icons"
+          >
+            Pokemon icons created by Roundicons Freebies - Flaticon
           </a>
         </div>
         <br />

@@ -1,10 +1,15 @@
 body {
   color: #4c241d;
-  background-image: url("https://ahost2.bulbagarden.net/content/bulbagarden/images/bg-green-2x-optim.png");
+  background: url("https://ahost2.bulbagarden.net/content/bulbagarden/images/bg-green-2x-optim.png")
+    no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .App {
   width: 35rem;
-  margin: 40px auto;
+  margin: 0 auto;
 }
 
 .menu {
@@ -17,10 +22,19 @@ body {
 .menu button {
   margin-right: 16px;
 }
-.menu p {
+
+.score {
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score p {
   color: deeppink;
   margin-left: 16px;
 }
+
 button {
   background: none;
   border: 2px solid #4c241d;
@@ -54,7 +68,14 @@ button:hover {
   margin-right: 16px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  body {
+    background: url("https://ahost2.bulbagarden.net/content/bulbagarden/images/bg-green-2x-optim.png");
+  }
+  .App {
+    max-width: 100%;
+    margin: 40px auto;
+  }
   .footer {
     display: none;
   }
