@@ -1,7 +1,7 @@
 body {
   color: #4c241d;
   background: url("https://ahost2.bulbagarden.net/content/bulbagarden/images/bg-green-2x-optim.png")
-    no-repeat center;
+    no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
