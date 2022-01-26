@@ -1,6 +1,6 @@
 ## Preview
 
-!["React-Game"](https://github.com/WebDevBernard/React-Game/blob/main/img/Preview.png?raw=true)
+!["React-Game"](https://github.com/WebDevBernard/React-Game/blob/main/img/Preview2.png?raw=true)
 
 ## About
 
