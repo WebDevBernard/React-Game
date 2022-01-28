@@ -178,7 +178,7 @@ function App() {
         >
           <button className="btn">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-            Tutorial Available on Github
+            Github Link
           </button>
         </a>
       </div>
